@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "392359753622",
+    "project_id": "trading-app-650fd",
+    "storage_bucket": "trading-app-650fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392359753622:android:3d568659849a6c80d38fb7",
+        "android_client_info": {
+          "package_name": "com.example.tradding_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy_ewONrjXxdj81ra-OrEbBOzUMlyokFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
