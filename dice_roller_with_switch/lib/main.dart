@@ -9,7 +9,7 @@ class DiceApp extends StatelessWidget {
     return MaterialApp(
       title: 'Dice Roller',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: DiceScreen(),
     );
@@ -22,13 +22,14 @@ class DiceScreen extends StatefulWidget {
 }
 
 class _DiceScreenState extends State<DiceScreen> {
-  int _diceNumber = 1; // Initial dice number
+  int _diceNumber = 0; // Initial dice number
 
   // Function to roll the dice
   void _rollDice() {
-    setState(() {
-      _diceNumber = Random().nextInt(6) + 1; // Random dice number from 1 to 6
-    });
+      setState(() {///0 to 5
+        _diceNumber = Random().nextInt(6) + 1;
+      });// Random dice number from 1 to 6
+    //print(_diceNumber);
   }
 
   @override
@@ -37,26 +38,31 @@ class _DiceScreenState extends State<DiceScreen> {
       appBar: AppBar(
         title: Text('Dice Roller'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Roll the Dice!',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 20),
-          // Dice image
-          Image.asset(
-            'images/dice-$_diceNumber.png',
-            height: 150,
-          ),
-          SizedBox(height: 20),
-          // Button to roll the dice
-          ElevatedButton(
-            onPressed: _rollDice,
-            child: Text('Roll Dice'),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Rolling Number: $_diceNumber',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 20),
+            // Dice image
+            Image.asset(
+              'images/dice-$_diceNumber.png',
+              height: 250,
+            ),
+            SizedBox(height: 20),
+            // Button to roll the dice
+            ElevatedButton(
+              // onPressed: (){
+              //   _rollDice();
+              // },
+              onPressed: _rollDice,
+              child: Text(' Roll the Dice  '),
+            ),
+          ],
+        ),
       ),
     );
   }
