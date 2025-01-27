@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:cached_network_image.dart';
+//import 'package:cached_network_image.dart';
+
 import 'package:ui_clone_whatsapp/screens/chat_screen.dart';
 
 class ChatTile extends StatelessWidget {
@@ -15,7 +17,7 @@ class ChatTile extends StatelessWidget {
     required this.lastMessage,
     required this.time,
     required this.unreadCount,
-    required this.profileImage,
+    required this.profileImage, required Null Function() onTap,
   });
 
   @override

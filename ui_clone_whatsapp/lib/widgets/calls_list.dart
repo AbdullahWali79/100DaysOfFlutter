@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ui_clone_whatsapp/screens/call_screen.dart';
 
 class CallsList extends StatelessWidget {
